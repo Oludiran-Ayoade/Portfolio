@@ -61,9 +61,8 @@ export default function Navbar() {
         </div>
 
         <a
-          href="/resume.pdf"
-          download
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 border border-white/40 text-white hover:bg-[#1c1410] hover:text-[#c9a84c] rounded-full text-sm font-medium transition-all duration-200"
+          href="/resume"
+          className="hidden md:inline-flex items-center gap-2 px-4 py-2 border border-white/40 text-white hover:bg-[#1c1410] hover:text-[#c9a84c] hover:border-[#c9a84c] rounded-full text-sm font-medium transition-all duration-200"
         >
           Resume
         </a>
@@ -93,9 +92,8 @@ export default function Navbar() {
           ))}
           <div className="pt-3">
             <a
-              href="/resume.pdf"
-              download
-              className="block w-full text-center px-4 py-2 border border-white/40 text-white rounded-full text-sm font-medium"
+              href="/resume"
+              className="block w-full text-center px-4 py-2 border border-white/40 text-white hover:border-[#c9a84c] rounded-full text-sm font-medium transition-colors"
             >
               Resume
             </a>
