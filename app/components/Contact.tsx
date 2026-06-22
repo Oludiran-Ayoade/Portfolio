@@ -51,9 +51,8 @@ export default function Contact() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // TODO: Sign up at formspree.io, create a form, and replace YOUR_FORM_ID below
     try {
-      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const res = await fetch("https://formspree.io/f/xzdlbvlz", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -122,20 +121,6 @@ export default function Contact() {
 
           {/* Contact form */}
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Formspree setup reminder */}
-            <p className="text-xs text-[#a89b8c] font-mono bg-[#1c1410] border border-dashed border-[#2a1f18] rounded-lg px-3 py-2">
-              💡 Set up{" "}
-              <a
-                href="https://formspree.io"
-                className="text-[#c9a84c] hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Formspree
-              </a>{" "}
-              and replace <span className="text-gray-400">YOUR_FORM_ID</span> in Contact.tsx.
-            </p>
-
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-mono text-[#a89b8c] mb-2 uppercase tracking-wider">
