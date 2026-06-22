@@ -70,22 +70,22 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className={`py-24 bg-gray-950 transition-all duration-700 ${
+      className={`py-24 bg-[#fdfbf7] dark:bg-gray-950 transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
           <span className="text-green-400 font-mono text-sm">03.</span>
-          <h2 className="text-3xl font-bold text-white">Skills</h2>
-          <div className="flex-1 h-px bg-gray-800" />
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Skills</h2>
+          <div className="flex-1 h-px bg-stone-200 dark:bg-gray-800" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {skillCategories.map(({ name, color, skills }) => (
             <div
               key={name}
-              className="p-6 bg-gray-900 border border-gray-800 rounded-xl hover:border-gray-700 transition-colors duration-200"
+              className="p-6 bg-white dark:bg-gray-900 border border-stone-200 dark:border-gray-800 rounded-xl hover:border-stone-300 dark:hover:border-gray-700 transition-colors duration-200"
             >
               <h3 className={`text-xs font-mono uppercase tracking-widest mb-4 ${headerColorMap[color]}`}>
                 {name}

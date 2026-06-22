@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ThemeProvider from "./providers/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Oludiran-Ayoade Olutimileyin | Full Stack Developer",
@@ -19,8 +20,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="bg-gray-950 text-gray-100 antialiased">{children}</body>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className="antialiased transition-colors duration-300">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

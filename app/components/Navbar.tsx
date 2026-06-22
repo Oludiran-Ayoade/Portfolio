@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, Code2 } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -37,7 +38,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-950/90 backdrop-blur-md border-b border-gray-800/60 shadow-2xl"
+          ? "bg-[#fdfbf7]/90 dark:bg-gray-950/90 backdrop-blur-md border-b border-stone-200/60 dark:border-gray-800/60 shadow-2xl"
           : "bg-transparent"
       }`}
     >
@@ -45,7 +46,7 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="flex items-center gap-2 text-green-400 font-mono font-bold text-lg hover:text-green-300 transition-colors"
+          className="flex items-center gap-2 text-amber-600 dark:text-green-400 font-mono font-bold text-lg hover:text-amber-700 dark:hover:text-green-300 transition-colors"
         >
           <Code2 size={22} />
           <span>OAE</span>
@@ -59,8 +60,8 @@ export default function Navbar() {
               href={item.href}
               className={`text-sm font-medium transition-colors duration-200 ${
                 activeSection === item.href.slice(1)
-                  ? "text-green-400"
-                  : "text-gray-400 hover:text-white"
+                  ? "text-amber-600 dark:text-green-400"
+                  : "text-stone-500 dark:text-gray-400 hover:text-stone-900 dark:hover:text-white"
               }`}
             >
               {item.label}
@@ -68,19 +69,21 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Resume CTA */}
-        <a
-          href="/resume.pdf"
-          download
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 border border-green-500/60 text-green-400 hover:bg-green-500 hover:text-gray-950 rounded-lg text-sm font-medium transition-all duration-200"
-        >
-          Resume
-        </a>
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
+          <a
+            href="/resume.pdf"
+            download
+            className="inline-flex items-center gap-2 px-4 py-2 border border-amber-500/60 dark:border-green-500/60 text-amber-600 dark:text-green-400 hover:bg-amber-500 dark:hover:bg-green-500 hover:text-white dark:hover:text-gray-950 rounded-lg text-sm font-medium transition-all duration-200"
+          >
+            Resume
+          </a>
+        </div>
 
         {/* Mobile burger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-gray-400 hover:text-white transition-colors"
+          className="md:hidden text-stone-500 dark:text-gray-400 hover:text-stone-900 dark:hover:text-white transition-colors"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -89,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <div className="md:hidden bg-gray-950/95 backdrop-blur-md border-b border-gray-800/60 px-6 pb-6 pt-2 space-y-1">
+        <div className="md:hidden bg-[#fdfbf7]/95 dark:bg-gray-950/95 backdrop-blur-md border-b border-stone-200/60 dark:border-gray-800/60 px-6 pb-6 pt-2 space-y-1">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -97,8 +100,8 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className={`block py-2.5 text-sm font-medium transition-colors ${
                 activeSection === item.href.slice(1)
-                  ? "text-green-400"
-                  : "text-gray-400 hover:text-white"
+                  ? "text-amber-600 dark:text-green-400"
+                  : "text-stone-500 dark:text-gray-400 hover:text-stone-900 dark:hover:text-white"
               }`}
             >
               {item.label}
@@ -108,7 +111,7 @@ export default function Navbar() {
             <a
               href="/resume.pdf"
               download
-              className="block w-full text-center px-4 py-2 border border-green-500/60 text-green-400 rounded-lg text-sm font-medium"
+              className="block w-full text-center px-4 py-2 border border-amber-500/60 dark:border-green-500/60 text-amber-600 dark:text-green-400 rounded-lg text-sm font-medium"
             >
               Resume
             </a>

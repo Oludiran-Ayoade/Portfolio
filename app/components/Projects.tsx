@@ -3,60 +3,54 @@
 import { useEffect, useRef, useState } from "react";
 import { Github, ExternalLink, FolderOpen } from "lucide-react";
 
-// TODO: Replace each entry with your actual project details.
-// - Set `title` to your project name
-// - Update `description` with what it does and your role
-// - Update `tech` with the actual stack used
-// - Replace `github` with the real GitHub repo URL
-// - Replace `live` with the real Netlify (or other) deployment URL (leave empty string if no live demo)
 const projects = [
   {
-    title: "Project Title One",
+    title: "NairaRate.ng",
     description:
-      "Describe what this project does, the problem it solves, and your role. E.g. A full-stack task management app with real-time collaboration, built with Next.js and Node.js.",
-    tech: ["Next.js", "Node.js", "MongoDB", "TypeScript"],
-    github: "https://github.com/YOUR_USERNAME/project-one",
-    live: "https://your-project-one.netlify.app",
+      "A platform for tracking Nigerian Naira exchange rates across multiple currencies. Provides real-time rate comparisons and historical trends for users.",
+    tech: ["React.js", "JavaScript", "CSS", "API Integration"],
+    github: "https://github.com/Oludiran-Ayoade/nairarate-ng",
+    live: "https://nairarate.ng/",
   },
   {
-    title: "Project Title Two",
+    title: "Fancy Churros",
     description:
-      "Describe what this project does, the problem it solves, and your role. E.g. A RESTful API for an e-commerce platform featuring JWT auth and role-based access control.",
-    tech: ["ASP.NET Core", "C#", "PostgreSQL", "Entity Framework Core"],
-    github: "https://github.com/YOUR_USERNAME/project-two",
-    live: "https://your-project-two.netlify.app",
+      "A visually engaging landing page built for a churros brand, showcasing modern web design and responsive layout techniques.",
+    tech: ["HTML", "CSS", "JavaScript", "Netlify"],
+    github: "https://github.com/Oludiran-Ayoade/fancy-churros",
+    live: "https://fancy-churros-49b58a.netlify.app/",
   },
   {
-    title: "Project Title Three",
+    title: "OyoBooking NG",
     description:
-      "Describe what this project does, the problem it solves, and your role. E.g. A responsive React dashboard for visualizing analytics data with chart integrations.",
-    tech: ["React.js", "TypeScript", "Tailwind CSS", "REST API"],
-    github: "https://github.com/YOUR_USERNAME/project-three",
-    live: "https://your-project-three.netlify.app",
+      "A booking platform designed for Oyo State, enabling seamless reservation services with an intuitive user interface.",
+    tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/Oludiran-Ayoade/oyobooking-ng",
+    live: "https://oyobooking-ng.netlify.app",
   },
   {
-    title: "Project Title Four",
+    title: "Steady Boba",
     description:
-      "Describe what this project does, the problem it solves, and your role. E.g. A health tracking app with PHP/Laravel backend and MySQL database.",
-    tech: ["PHP", "Laravel", "MySQL", "React.js"],
-    github: "https://github.com/YOUR_USERNAME/project-four",
-    live: "",
+      "A modern landing page for a boba tea brand featuring smooth animations and responsive design for all devices.",
+    tech: ["HTML", "Sass", "JavaScript", "Responsive Design"],
+    github: "https://github.com/Oludiran-Ayoade/steady-boba",
+    live: "https://steady-boba-1c9363.netlify.app/",
   },
   {
-    title: "Project Title Five",
+    title: "Department of Accounting",
     description:
-      "Describe what this project does, the problem it solves, and your role. E.g. A DSA problem collection platform with curated challenges and solutions.",
-    tech: ["JavaScript", "TypeScript", "Node.js"],
-    github: "https://github.com/YOUR_USERNAME/project-five",
-    live: "https://your-project-five.netlify.app",
-  },
-  {
-    title: "Project Title Six",
-    description:
-      "Describe what this project does, the problem it solves, and your role. E.g. A responsive portfolio or landing page built with HTML, CSS, and vanilla JavaScript.",
+      "A professional institutional website for a university accounting department with course information, faculty profiles, and resources.",
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    github: "https://github.com/YOUR_USERNAME/project-six",
-    live: "https://your-project-six.netlify.app",
+    github: "https://github.com/Oludiran-Ayoade/dept-of-accounting",
+    live: "https://deptofaccounting.netlify.app/",
+  },
+  {
+    title: "More Projects",
+    description:
+      "Explore additional repositories and works across various technologies and platforms.",
+    tech: ["React", "Next.js", "Node.js", "ASP.NET Core"],
+    github: "https://github.com/Oludiran-Ayoade",
+    live: "",
   },
 ];
 
@@ -77,40 +71,33 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className={`py-24 bg-gray-900/20 transition-all duration-700 ${
+      className={`py-24 bg-stone-100 dark:bg-gray-950/50 transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-4">
-          <span className="text-green-400 font-mono text-sm">04.</span>
-          <h2 className="text-3xl font-bold text-white">Projects</h2>
-          <div className="flex-1 h-px bg-gray-800" />
+          <span className="text-amber-600 dark:text-green-400 font-mono text-sm">04.</span>
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Projects</h2>
+          <div className="flex-1 h-px bg-stone-200 dark:bg-gray-800" />
         </div>
-
-        {/* Placeholder instruction banner */}
-        <p className="text-gray-600 text-xs font-mono mb-12 bg-gray-900 border border-dashed border-gray-800 rounded-lg px-4 py-3">
-          💡 Replace placeholder data in{" "}
-          <span className="text-green-400">app/components/Projects.tsx</span>{" "}
-          with your actual GitHub repos and Netlify deployment URLs.
-        </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, i) => (
             <div
               key={i}
-              className="group relative flex flex-col p-6 bg-gray-900 border border-gray-800/60 border-dashed rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-green-500/30 hover:shadow-xl hover:shadow-black/30"
+              className="group relative flex flex-col p-6 bg-white dark:bg-gray-900 border border-stone-200 dark:border-gray-800/60 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-green-500/30 hover:shadow-xl hover:shadow-stone-200/50 dark:hover:shadow-black/30"
             >
               {/* Top row */}
               <div className="flex items-start justify-between mb-5">
-                <FolderOpen size={30} className="text-green-400 group-hover:text-green-300 transition-colors" />
+                <FolderOpen size={30} className="text-amber-600 dark:text-green-400 group-hover:text-amber-700 dark:group-hover:text-green-300 transition-colors" />
                 <div className="flex gap-3">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-white transition-colors"
+                      className="text-stone-400 dark:text-gray-600 hover:text-stone-800 dark:hover:text-white transition-colors"
                       aria-label="GitHub repository"
                     >
                       <Github size={17} />
@@ -121,7 +108,7 @@ export default function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-white transition-colors"
+                      className="text-stone-400 dark:text-gray-600 hover:text-stone-800 dark:hover:text-white transition-colors"
                       aria-label="Live demo"
                     >
                       <ExternalLink size={17} />
@@ -131,17 +118,17 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <h3 className="text-gray-400 italic font-semibold text-sm mb-2 group-hover:text-green-400 transition-colors">
+              <h3 className="text-stone-700 dark:text-gray-400 font-semibold text-sm mb-2 group-hover:text-amber-600 dark:group-hover:text-green-400 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-gray-600 italic text-xs leading-relaxed flex-1 mb-4">
+              <p className="text-stone-500 dark:text-gray-600 text-xs leading-relaxed flex-1 mb-4">
                 {project.description}
               </p>
 
               {/* Tech stack */}
               <div className="flex flex-wrap gap-x-3 gap-y-1 mt-auto">
                 {project.tech.map((t) => (
-                  <span key={t} className="text-xs font-mono text-gray-600">
+                  <span key={t} className="text-xs font-mono text-stone-500 dark:text-gray-600">
                     {t}
                   </span>
                 ))}
@@ -152,12 +139,12 @@ export default function Projects() {
 
         {/* GitHub CTA */}
         <div className="mt-10 text-center">
-          {/* TODO: Replace YOUR_GITHUB_USERNAME with your actual GitHub username */}
+          {/* TODO: Replace Oludiran-Ayoade with your actual GitHub username */}
           <a
-            href="https://github.com/YOUR_GITHUB_USERNAME"
+            href="https://github.com/Oludiran-Ayoade"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-gray-700 hover:border-green-500 text-gray-400 hover:text-green-400 rounded-lg transition-all duration-200 text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-stone-300 dark:border-gray-700 hover:border-amber-500 dark:hover:border-green-500 text-stone-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-green-400 rounded-lg transition-all duration-200 text-sm"
           >
             <Github size={16} />
             View All Repositories on GitHub

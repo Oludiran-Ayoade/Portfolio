@@ -98,28 +98,28 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className={`py-24 bg-gray-900/20 transition-all duration-700 ${
+      className={`py-24 bg-stone-100 dark:bg-gray-950/50 transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
           <span className="text-green-400 font-mono text-sm">02.</span>
-          <h2 className="text-3xl font-bold text-white">Work Experience</h2>
-          <div className="flex-1 h-px bg-gray-800" />
+          <h2 className="text-3xl font-bold text-stone-900 dark:text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Work Experience</h2>
+          <div className="flex-1 h-px bg-stone-200 dark:bg-gray-800" />
         </div>
 
         <div className="grid md:grid-cols-[220px_1fr] gap-8">
           {/* Tab list */}
-          <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l-2 border-gray-800 pb-4 md:pb-0 gap-1 shrink-0">
+          <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l-2 border-stone-200 dark:border-gray-800 pb-4 md:pb-0 gap-1 shrink-0">
             {experiences.map((ex, i) => (
               <button
                 key={i}
                 onClick={() => setActive(i)}
                 className={`text-left px-4 py-3 text-sm font-medium transition-all duration-200 whitespace-nowrap md:whitespace-normal rounded-r-lg shrink-0 ${
                   active === i
-                    ? "text-green-400 bg-green-500/10 border-l-2 border-green-400 -ml-0.5"
-                    : "text-gray-500 hover:text-gray-300 hover:bg-gray-800/40 border-l-2 border-transparent -ml-0.5"
+                    ? "text-amber-600 dark:text-green-400 bg-amber-500/10 dark:bg-green-500/10 border-l-2 border-amber-600 dark:border-green-400 -ml-0.5"
+                    : "text-stone-500 dark:text-gray-500 hover:text-stone-800 dark:hover:text-gray-300 hover:bg-stone-200/40 dark:hover:bg-gray-800/40 border-l-2 border-transparent -ml-0.5"
                 }`}
               >
                 <span className="block">{ex.company}</span>
@@ -133,11 +133,11 @@ export default function Experience() {
           {/* Content panel */}
           <div className="space-y-5 min-h-[280px]">
             <div>
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-stone-900 dark:text-white">
                 {exp.role}{" "}
-                <span className="text-green-400">@ {exp.company}</span>
+                <span className="text-amber-600 dark:text-green-400">@ {exp.company}</span>
               </h3>
-              <p className="flex items-center gap-2 text-gray-500 text-sm mt-1.5 font-mono">
+              <p className="flex items-center gap-2 text-stone-400 dark:text-gray-500 text-sm mt-1.5 font-mono">
                 <Calendar size={13} />
                 {exp.period}
               </p>
@@ -145,10 +145,10 @@ export default function Experience() {
 
             <ul className="space-y-3">
               {exp.bullets.map((b, i) => (
-                <li key={i} className="flex gap-3 text-gray-400 text-sm leading-relaxed">
+                <li key={i} className="flex gap-3 text-stone-600 dark:text-gray-400 text-sm leading-relaxed">
                   <ChevronRight
                     size={15}
-                    className="text-green-400 mt-0.5 shrink-0"
+                    className="text-amber-600 dark:text-green-400 mt-0.5 shrink-0"
                   />
                   {b}
                 </li>
@@ -159,7 +159,7 @@ export default function Experience() {
               {exp.tech.map((t) => (
                 <span
                   key={t}
-                  className="px-3 py-1 bg-green-500/10 text-green-400 text-xs font-mono rounded-full border border-green-500/20"
+                  className="px-3 py-1 bg-amber-500/10 dark:bg-green-500/10 text-amber-600 dark:text-green-400 text-xs font-mono rounded-full border border-amber-500/20 dark:border-green-500/20"
                 >
                   {t}
                 </span>
