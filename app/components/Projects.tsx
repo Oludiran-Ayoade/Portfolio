@@ -71,33 +71,31 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className={`py-24 bg-stone-100 dark:bg-gray-950/50 transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
+      className={`py-24 bg-stone-100 transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-4">
-          <span className="text-amber-600 dark:text-green-400 font-mono text-sm">04.</span>
-          <h2 className="text-3xl font-bold text-stone-900 dark:text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Projects</h2>
-          <div className="flex-1 h-px bg-stone-200 dark:bg-gray-800" />
+          <span className="text-amber-600 font-mono text-sm">04.</span>
+          <h2 className="text-3xl font-bold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>Projects</h2>
+          <div className="flex-1 h-px bg-stone-200" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, i) => (
             <div
               key={i}
-              className="group relative flex flex-col p-6 bg-white dark:bg-gray-900 border border-stone-200 dark:border-gray-800/60 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-green-500/30 hover:shadow-xl hover:shadow-stone-200/50 dark:hover:shadow-black/30"
+              className="group relative flex flex-col p-6 bg-white border border-stone-200 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-xl hover:shadow-stone-200/50"
             >
               {/* Top row */}
               <div className="flex items-start justify-between mb-5">
-                <FolderOpen size={30} className="text-amber-600 dark:text-green-400 group-hover:text-amber-700 dark:group-hover:text-green-300 transition-colors" />
+                <FolderOpen size={30} className="text-amber-600 group-hover:text-amber-700 transition-colors" />
                 <div className="flex gap-3">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-stone-400 dark:text-gray-600 hover:text-stone-800 dark:hover:text-white transition-colors"
+                      className="text-stone-400 hover:text-stone-800 transition-colors"
                       aria-label="GitHub repository"
                     >
                       <Github size={17} />
@@ -108,7 +106,7 @@ export default function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-stone-400 dark:text-gray-600 hover:text-stone-800 dark:hover:text-white transition-colors"
+                      className="text-stone-400 hover:text-stone-800 transition-colors"
                       aria-label="Live demo"
                     >
                       <ExternalLink size={17} />
@@ -118,17 +116,17 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <h3 className="text-stone-700 dark:text-gray-400 font-semibold text-sm mb-2 group-hover:text-amber-600 dark:group-hover:text-green-400 transition-colors">
+              <h3 className="text-stone-700 font-semibold text-sm mb-2 group-hover:text-amber-600 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-stone-500 dark:text-gray-600 text-xs leading-relaxed flex-1 mb-4">
+              <p className="text-stone-500 text-xs leading-relaxed flex-1 mb-4">
                 {project.description}
               </p>
 
               {/* Tech stack */}
               <div className="flex flex-wrap gap-x-3 gap-y-1 mt-auto">
                 {project.tech.map((t) => (
-                  <span key={t} className="text-xs font-mono text-stone-500 dark:text-gray-600">
+                  <span key={t} className="text-xs font-mono text-stone-500">
                     {t}
                   </span>
                 ))}
@@ -144,7 +142,7 @@ export default function Projects() {
             href="https://github.com/Oludiran-Ayoade"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-stone-300 dark:border-gray-700 hover:border-amber-500 dark:hover:border-green-500 text-stone-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-green-400 rounded-lg transition-all duration-200 text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-stone-300 hover:border-amber-500 text-stone-600 hover:text-amber-600 rounded-lg transition-all duration-200 text-sm"
           >
             <Github size={16} />
             View All Repositories on GitHub

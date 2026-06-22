@@ -10,13 +10,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #fdfbf7;
+  background-color: #f0ebe3;
   color: #1c1917;
-}
-
-.dark body {
-  background-color: #030712;
-  color: #f9fafb;
 }
 
 code, pre, .font-mono {
@@ -30,29 +25,16 @@ code, pre, .font-mono {
 ::-webkit-scrollbar-track {
   background: #e7e5e4;
 }
-.dark ::-webkit-scrollbar-track {
-  background: #111827;
-}
 ::-webkit-scrollbar-thumb {
   background: #d6d3d1;
   border-radius: 3px;
 }
-.dark ::-webkit-scrollbar-thumb {
-  background: #374151;
-}
 ::-webkit-scrollbar-thumb:hover {
   background: #d97706;
-}
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #22c55e;
 }
 
 /* Selection color */
 ::selection {
   background: rgba(217, 119, 6, 0.2);
   color: #1c1917;
-}
-.dark ::selection {
-  background: rgba(34, 197, 94, 0.2);
-  color: #f9fafb;
 }
