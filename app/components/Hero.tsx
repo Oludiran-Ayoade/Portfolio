@@ -28,10 +28,10 @@ export default function Hero() {
             </p>
 
             <div className="space-y-3">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#f5f0e8] leading-[1.1] tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#f5f0e8] leading-[1.1] tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 I&apos;m <span className="text-[#d4af37]">Oludiran-Ayoade</span>
               </h1>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#e8e0d4] leading-[1.1] tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#e8e0d4] leading-[1.1] tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 Olutimileyin
               </h1>
             </div>
