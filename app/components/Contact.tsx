@@ -78,8 +78,8 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-4">
           <span className="text-[#c9a84c] font-mono text-sm">07.</span>
-          <h2 className="text-4xl font-extrabold text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Get In Touch</h2>
-          <div className="flex-1 h-px bg-gray-300" />
+          <h2 className="text-4xl font-extrabold text-[#f5f0e8]" style={{ fontFamily: "'Poppins', sans-serif" }}>Get In Touch</h2>
+          <div className="flex-1 h-px bg-[#3a2f28]" />
         </div>
 
         <p className="text-[#a89b8c] mb-12 max-w-lg text-sm leading-relaxed">

@@ -103,8 +103,8 @@ export default function Experience() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
           <span className="text-[#c9a84c] font-mono text-sm">02.</span>
-          <h2 className="text-4xl font-extrabold text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Work Experience</h2>
-          <div className="flex-1 h-px bg-gray-300" />
+          <h2 className="text-4xl font-extrabold text-[#f5f0e8]" style={{ fontFamily: "'Poppins', sans-serif" }}>Work Experience</h2>
+          <div className="flex-1 h-px bg-[#3a2f28]" />
         </div>
 
         <div className="grid md:grid-cols-[220px_1fr] gap-8">
@@ -114,7 +114,7 @@ export default function Experience() {
               <button
                 key={i}
                 onClick={() => setActive(i)}
-                className={`text-left px-4 py-3 text-sm font-medium transition-all duration-200 whitespace-nowrap md:whitespace-normal rounded-r-lg shrink-0 ${ active === i ? "text-[#c9a84c] bg-[#c9a84c]/10 border-l-2 border-amber-600 -ml-0.5" : "text-[#a89b8c] hover:text-[#e8e0d4] hover:bg-gray-300/40 border-l-2 border-transparent -ml-0.5" }`}
+                className={`text-left px-4 py-3 text-sm font-medium transition-all duration-200 whitespace-nowrap md:whitespace-normal rounded-r-lg shrink-0 ${ active === i ? "text-[#c9a84c] bg-[#c9a84c]/10 border-l-2 border-amber-600 -ml-0.5" : "text-[#a89b8c] hover:text-[#e8e0d4] hover:bg-[#3a2f28]/40 border-l-2 border-transparent -ml-0.5" }`}
               >
                 <span className="block">{ex.company}</span>
                 {ex.current && (
@@ -127,9 +127,9 @@ export default function Experience() {
           {/* Content panel */}
           <div className="space-y-5 min-h-[280px]">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-[#f5f0e8]">
                 {exp.role}{" "}
-                <span className="text-amber-600">@ {exp.company}</span>
+                <span className="text-[#d4af37]">@ {exp.company}</span>
               </h3>
               <p className="flex items-center gap-2 text-[#8a7d6e] text-sm mt-1.5 font-mono">
                 <Calendar size={13} />

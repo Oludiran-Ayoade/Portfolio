@@ -75,8 +75,8 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
           <span className="text-[#c9a84c] font-mono text-sm">03.</span>
-          <h2 className="text-4xl font-extrabold text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Skills</h2>
-          <div className="flex-1 h-px bg-gray-300" />
+          <h2 className="text-4xl font-extrabold text-[#f5f0e8]" style={{ fontFamily: "'Poppins', sans-serif" }}>Skills</h2>
+          <div className="flex-1 h-px bg-[#3a2f28]" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
