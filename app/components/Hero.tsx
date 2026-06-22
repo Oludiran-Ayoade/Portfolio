@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Mail, Phone, MapPin, ChevronDown, Github } from "lucide-react";
+import { Mail, Phone, MapPin, ChevronDown, Github, User, Code2, Briefcase } from "lucide-react";
 
 export default function Hero() {
   const [visible, setVisible] = useState(false);
@@ -14,166 +14,112 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden"
+      className="min-h-screen flex items-center relative overflow-hidden bg-[#f5f5f0] pt-20"
     >
-      {/* Background layers */}
-      <div className="absolute inset-0 bg-[#0c0a09]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-[0.15]" />
-      <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/3 -right-32 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: text */}
           <div
-            className={`space-y-6 transition-all duration-1000 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+            className={`space-y-5 transition-all duration-1000 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
           >
-            <p className="text-green-400 font-mono text-sm tracking-[0.2em]">
-              &lt;Hello, World! /&gt; &nbsp; I&apos;m
+            <p className="text-amber-500 font-mono text-sm tracking-[0.2em] uppercase">
+              Full Stack Developer
             </p>
 
-            <div className="space-y-1">
-              <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-none tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Oludiran-Ayoade
+            <div className="space-y-2">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                I&apos;m <span className="text-[#1a3a1a]">Oludiran-Ayoade</span>
               </h1>
-              <h1 className="text-5xl md:text-6xl font-extrabold leading-none tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-300 to-cyan-400">
-                  Olutimileyin
-                </span>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Olutimileyin
               </h1>
             </div>
 
-            <h2 className="text-xl text-gray-500 font-light tracking-wide">
-              Full Stack Developer &nbsp;·&nbsp; Backend Specialist
-            </h2>
-
-            <p className="text-gray-500 text-base leading-relaxed max-w-md">
-              Crafting scalable APIs and intuitive interfaces. Passionate about
-              clean architecture, CQRS patterns, and turning complex problems
-              into elegant code.
+            <p className="text-gray-600 text-base leading-relaxed max-w-md">
+              Crafting scalable APIs and intuitive interfaces. Based in{" "}
+              <span className="font-medium text-gray-800">Oyo State, Nigeria</span>.
+              Passionate about clean architecture, CQRS patterns, and turning
+              complex problems into elegant code.
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-1">
+            <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-green-500 hover:bg-green-500 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-green-500/25 text-sm"
+                className="px-6 py-3 bg-[#1a3a1a] hover:bg-[#143014] text-white font-semibold rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-green-900/20 text-sm inline-flex items-center gap-2"
               >
                 View My Work
+                <ChevronDown size={14} className="rotate-[-90deg]" />
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 border border-[#44403c] hover:border-green-500 text-gray-700 hover:text-green-400 font-semibold rounded-lg transition-all duration-200 text-sm"
+                className="px-6 py-3 border border-gray-400 hover:border-[#1a3a1a] text-gray-700 hover:text-[#1a3a1a] font-semibold rounded-full transition-all duration-200 text-sm"
               >
                 Get In Touch
               </a>
             </div>
 
-            <div className="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-stone-500">
+            <div className="flex flex-wrap gap-x-5 gap-y-2 pt-3 text-sm text-gray-500">
               <span className="flex items-center gap-1.5">
-                <MapPin size={13} className="text-amber-600" />
+                <MapPin size={14} className="text-amber-500" />
                 Oyo State, Nigeria
               </span>
               <a
                 href="mailto:ooludiranayoade@gmail.com"
-                className="flex items-center gap-1.5 hover:text-green-400 transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#1a3a1a] transition-colors"
               >
-                <Mail size={13} className="text-amber-600" />
+                <Mail size={14} className="text-amber-500" />
                 ooludiranayoade@gmail.com
-              </a>
-              <a
-                href="tel:+2347060601254"
-                className="flex items-center gap-1.5 hover:text-green-400 transition-colors"
-              >
-                <Phone size={13} className="text-amber-600" />
-                +234 706 060 1254
               </a>
             </div>
 
             {/* Social links */}
             <div className="flex gap-3 pt-1">
-              {/* TODO: Replace Oludiran-Ayoade with your actual GitHub username */}
               <a
                 href="https://github.com/Oludiran-Ayoade"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-[#1c1917] border border-[#292524] hover:border-green-500/50 hover:text-green-400 rounded-lg text-gray-500 transition-all duration-200 text-sm font-mono"
+                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:border-[#1a3a1a] hover:text-[#1a3a1a] rounded-full text-gray-600 transition-all duration-200 text-sm font-medium shadow-sm"
               >
                 <Github size={15} />
                 GitHub
               </a>
+              <a
+                href="tel:+2347060601254"
+                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:border-[#1a3a1a] hover:text-[#1a3a1a] rounded-full text-gray-600 transition-all duration-200 text-sm font-medium shadow-sm"
+              >
+                <Phone size={15} />
+                +234 706 060 1254
+              </a>
             </div>
           </div>
 
-          {/* Right: decorative code block */}
+          {/* Right: photo area with amber circle */}
           <div
-            className={`hidden lg:block transition-all duration-1000 delay-300 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+            className={`hidden lg:flex justify-center items-center transition-all duration-1000 delay-300 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
           >
             <div className="relative">
-              <div className="p-7 bg-[#1c1917]/90 border border-[#292524] rounded-2xl shadow-2xl backdrop-blur-sm font-mono text-sm leading-7 animate-float">
-                {/* Window chrome */}
-                <div className="flex gap-2 mb-5">
-                  <div className="w-3 h-3 rounded-full bg-red-400/70" />
-                  <div className="w-3 h-3 rounded-full bg-amber-400/70" />
-                  <div className="w-3 h-3 rounded-full bg-green-400/70" />
-                  <span className="ml-3 text-gray-600 text-xs">developer.ts</span>
-                </div>
+              {/* Amber circle behind */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-amber-400 rounded-full" />
 
-                <pre className="text-left">
-                  <span className="text-blue-500">const </span>
-                  <span className="text-cyan-600">developer</span>
-                  <span className="text-stone-800"> = {"{"}</span>
-                  {"\n"}
-                  {"  "}
-                  <span className="text-green-600">name</span>
-                  <span className="text-stone-800">: </span>
-                  <span className="text-amber-600">&quot;Olutimileyin&quot;</span>
-                  <span className="text-stone-400">,</span>
-                  {"\n"}
-                  {"  "}
-                  <span className="text-green-600">role</span>
-                  <span className="text-stone-800">: </span>
-                  <span className="text-amber-600">&quot;Full Stack Dev&quot;</span>
-                  <span className="text-stone-400">,</span>
-                  {"\n"}
-                  {"  "}
-                  <span className="text-green-600">stack</span>
-                  <span className="text-stone-800">: [</span>
-                  <span className="text-amber-600">&quot;.NET&quot;</span>
-                  <span className="text-stone-800">, </span>
-                  <span className="text-amber-600">&quot;React&quot;</span>
-                  <span className="text-stone-800">, </span>
-                  <span className="text-amber-600">&quot;Node&quot;</span>
-                  <span className="text-stone-800">]</span>
-                  <span className="text-stone-400">,</span>
-                  {"\n"}
-                  {"  "}
-                  <span className="text-green-600">location</span>
-                  <span className="text-stone-800">: </span>
-                  <span className="text-amber-600">&quot;Nigeria 🇳🇬&quot;</span>
-                  <span className="text-stone-400">,</span>
-                  {"\n"}
-                  {"  "}
-                  <span className="text-green-600">openToWork</span>
-                  <span className="text-stone-800">: </span>
-                  <span className="text-orange-500">true</span>
-                  <span className="text-stone-400">,</span>
-                  {"\n"}
-                  <span className="text-stone-800">{"}"}</span>
-                  <span className="text-stone-400">;</span>
-                </pre>
+              {/* Photo placeholder */}
+              <div className="relative w-64 h-64 bg-white rounded-full border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
+                <User size={80} className="text-gray-300" />
               </div>
-              {/* Accent dot */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-500 rounded-full shadow-lg shadow-green-500/50 animate-pulse" />
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400/60 rounded-full" />
+
+              {/* Floating badge - top right */}
+              <div className="absolute -top-2 right-0 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center gap-2 animate-float">
+                <Code2 size={16} className="text-[#1a3a1a]" />
+                <span className="text-xs font-semibold text-gray-800">Full Stack</span>
+              </div>
+
+              {/* Floating badge - bottom left */}
+              <div className="absolute -bottom-2 left-0 bg-[#1a3a1a] rounded-full px-4 py-2 shadow-lg flex items-center gap-2 animate-float" style={{ animationDelay: "1s" }}>
+                <Briefcase size={16} className="text-amber-400" />
+                <span className="text-xs font-semibold text-white">Open to Work</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce">
-        <span className="text-xs text-gray-600 font-mono tracking-widest">scroll</span>
-        <ChevronDown size={16} className="text-stone-400" />
       </div>
     </section>
   );
