@@ -32,7 +32,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
           <span className="text-[#c9a84c] font-mono text-sm">01.</span>
-          <h2 className="text-3xl font-bold text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>About Me</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>About Me</h2>
           <div className="flex-1 h-px bg-gray-300" />
         </div>
 
