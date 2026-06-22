@@ -27,7 +27,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className={`py-24 bg-[#f0ebe3] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+      className={`py-24 bg-[#0c0a09] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
@@ -37,18 +37,18 @@ export default function About() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-14 items-start">
-          <div className="space-y-5 text-stone-600 leading-relaxed">
+          <div className="space-y-5 text-gray-400 leading-relaxed">
             <p>
               I&apos;m a{" "}
-              <span className="text-stone-900 font-medium">Full Stack Developer</span>{" "}
+              <span className="text-white font-medium">Full Stack Developer</span>{" "}
               with roots in Civil Engineering — I bring a builder&apos;s mindset to every
               codebase: structured, methodical, and obsessed with getting things right.
             </p>
             <p>
               Currently building robust backend systems at{" "}
-              <span className="text-amber-600 font-medium">Aft Solutions</span>, where I
+              <span className="text-green-400 font-medium">Aft Solutions</span>, where I
               design RESTful APIs using{" "}
-              <span className="text-stone-900 font-medium">ASP.NET Core</span> with Vertical
+              <span className="text-white font-medium">ASP.NET Core</span> with Vertical
               Slice Architecture, CQRS patterns, and JWT-based auth. I care deeply about
               code that scales and is easy for the next developer to understand.
             </p>
@@ -63,7 +63,7 @@ export default function About() {
               {["ASP.NET Core", "React.js", "Next.js", "Node.js", "TypeScript", "PostgreSQL"].map((t) => (
                 <span
                   key={t}
-                  className="px-3 py-1 text-xs font-mono text-amber-600 bg-amber-500/10 border border-amber-500/20 rounded-full"
+                  className="px-3 py-1 text-xs font-mono text-green-400 bg-green-500/10 border border-amber-500/20 rounded-full"
                 >
                   {t}
                 </span>
@@ -75,14 +75,14 @@ export default function About() {
             {highlights.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="p-5 bg-white border border-stone-200 rounded-xl hover:border-amber-500/30 transition-all duration-200 group"
+                className="p-5 bg-[#1c1917] border border-[#292524] rounded-xl hover:border-green-500/30 transition-all duration-200 group"
               >
                 <Icon
                   size={22}
-                  className="text-amber-600 mb-3 group-hover:scale-110 transition-transform duration-200"
+                  className="text-green-400 mb-3 group-hover:scale-110 transition-transform duration-200"
                 />
-                <h3 className="text-stone-900 font-semibold text-sm mb-1">{title}</h3>
-                <p className="text-stone-500 text-xs leading-relaxed">{desc}</p>
+                <h3 className="text-white font-semibold text-sm mb-1">{title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

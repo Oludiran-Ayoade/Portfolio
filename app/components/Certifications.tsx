@@ -43,7 +43,7 @@ export default function Certifications() {
     <section
       id="certifications"
       ref={ref}
-      className={`py-24 bg-stone-100 transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+      className={`py-24 bg-[#141210] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
@@ -56,18 +56,18 @@ export default function Certifications() {
           {certifications.map(({ name, issuer, year }) => (
             <div
               key={name}
-              className="p-5 bg-white border border-stone-200 rounded-xl hover:border-amber-500/30 hover:-translate-y-0.5 transition-all duration-200"
+              className="p-5 bg-[#1c1917] border border-[#292524] rounded-xl hover:border-green-500/30 hover:-translate-y-0.5 transition-all duration-200"
             >
               <div className="flex items-center justify-between mb-4">
-                <div className="p-2 bg-amber-500/10 rounded-lg">
+                <div className="p-2 bg-green-500/10 rounded-lg">
                   <Award size={18} className="text-amber-600" />
                 </div>
-                <span className="text-xs font-mono text-stone-500 bg-stone-100 px-2 py-0.5 rounded">
+                <span className="text-xs font-mono text-gray-500 bg-[#141210] px-2 py-0.5 rounded">
                   {year}
                 </span>
               </div>
-              <h3 className="text-stone-900 font-medium text-sm leading-snug mb-2">{name}</h3>
-              <p className="text-stone-500 text-xs">{issuer}</p>
+              <h3 className="text-white font-medium text-sm leading-snug mb-2">{name}</h3>
+              <p className="text-gray-500 text-xs">{issuer}</p>
             </div>
           ))}
         </div>

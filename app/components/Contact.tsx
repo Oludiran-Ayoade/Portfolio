@@ -73,7 +73,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className={`py-24 bg-[#f0ebe3] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+      className={`py-24 bg-[#0c0a09] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-4">
@@ -82,7 +82,7 @@ export default function Contact() {
           <div className="flex-1 h-px bg-stone-200" />
         </div>
 
-        <p className="text-stone-500 mb-12 max-w-lg text-sm leading-relaxed">
+        <p className="text-gray-500 mb-12 max-w-lg text-sm leading-relaxed">
           I&apos;m currently open to new opportunities. Whether you have a
           project in mind, want to collaborate, or just want to connect — my
           inbox is always open.
@@ -94,13 +94,13 @@ export default function Contact() {
             {contactInfo.map(({ icon: Icon, label, value, href }) => (
               <div
                 key={label}
-                className="flex items-center gap-4 p-4 bg-white border border-stone-200 rounded-xl hover:border-amber-500/30 transition-colors"
+                className="flex items-center gap-4 p-4 bg-[#1c1917] border border-[#292524] rounded-xl hover:border-green-500/30 transition-colors"
               >
-                <div className="p-3 bg-amber-500/10 rounded-lg shrink-0">
+                <div className="p-3 bg-green-500/10 rounded-lg shrink-0">
                   <Icon size={18} className="text-amber-600" />
                 </div>
                 <div>
-                  <p className="text-stone-500 text-xs font-mono uppercase tracking-widest mb-0.5">
+                  <p className="text-gray-500 text-xs font-mono uppercase tracking-widest mb-0.5">
                     {label}
                   </p>
                   {href ? (
@@ -108,12 +108,12 @@ export default function Contact() {
                       href={href}
                       target={href.startsWith("http") ? "_blank" : undefined}
                       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="text-stone-900 hover:text-amber-600 transition-colors text-sm font-medium"
+                      className="text-white hover:text-green-400 transition-colors text-sm font-medium"
                     >
                       {value}
                     </a>
                   ) : (
-                    <p className="text-stone-900 text-sm font-medium">{value}</p>
+                    <p className="text-white text-sm font-medium">{value}</p>
                   )}
                 </div>
               </div>
@@ -123,11 +123,11 @@ export default function Contact() {
           {/* Contact form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Formspree setup reminder */}
-            <p className="text-xs text-stone-500 font-mono bg-white border border-dashed border-stone-200 rounded-lg px-3 py-2">
+            <p className="text-xs text-gray-500 font-mono bg-[#1c1917] border border-dashed border-[#292524] rounded-lg px-3 py-2">
               💡 Set up{" "}
               <a
                 href="https://formspree.io"
-                className="text-amber-600 hover:underline"
+                className="text-green-400 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -138,7 +138,7 @@ export default function Contact() {
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-mono text-stone-500 mb-2 uppercase tracking-wider">
+                <label className="block text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">
                   Name
                 </label>
                 <input
@@ -146,11 +146,11 @@ export default function Contact() {
                   name="name"
                   required
                   placeholder="John Doe"
-                  className="w-full px-4 py-3 bg-white border border-stone-200 rounded-lg text-stone-900 placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm"
+                  className="w-full px-4 py-3 bg-[#1c1917] border border-[#292524] rounded-lg text-white placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm"
                 />
               </div>
               <div>
-                <label className="block text-xs font-mono text-stone-500 mb-2 uppercase tracking-wider">
+                <label className="block text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">
                   Email
                 </label>
                 <input
@@ -158,13 +158,13 @@ export default function Contact() {
                   name="email"
                   required
                   placeholder="john@example.com"
-                  className="w-full px-4 py-3 bg-white border border-stone-200 rounded-lg text-stone-900 placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm"
+                  className="w-full px-4 py-3 bg-[#1c1917] border border-[#292524] rounded-lg text-white placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-mono text-stone-500 mb-2 uppercase tracking-wider">
+              <label className="block text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">
                 Subject
               </label>
               <input
@@ -172,12 +172,12 @@ export default function Contact() {
                 name="subject"
                 required
                 placeholder="Project Collaboration / Job Opportunity"
-                className="w-full px-4 py-3 bg-white border border-stone-200 rounded-lg text-stone-900 placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm"
+                className="w-full px-4 py-3 bg-[#1c1917] border border-[#292524] rounded-lg text-white placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-mono text-stone-500 mb-2 uppercase tracking-wider">
+              <label className="block text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">
                 Message
               </label>
               <textarea
@@ -185,19 +185,19 @@ export default function Contact() {
                 required
                 rows={5}
                 placeholder="Tell me about your project or opportunity..."
-                className="w-full px-4 py-3 bg-white border border-stone-200 rounded-lg text-stone-900 placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm resize-none"
+                className="w-full px-4 py-3 bg-[#1c1917] border border-[#292524] rounded-lg text-white placeholder-stone-300 focus:outline-none focus:border-amber-500 transition-colors text-sm resize-none"
               />
             </div>
 
             {status === "sent" ? (
-              <div className="w-full py-3 bg-amber-500/20 border border-amber-500/30 text-amber-600 rounded-lg text-sm text-center font-medium">
+              <div className="w-full py-3 bg-green-500/20 border border-green-500/30 text-green-400 rounded-lg text-sm text-center font-medium">
                 ✓ Message sent! I&apos;ll get back to you soon.
               </div>
             ) : (
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-500 disabled:opacity-60 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/20 text-sm"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-500 disabled:opacity-60 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-green-500/20 text-sm"
               >
                 <Send size={15} />
                 {status === "sending" ? "Sending..." : "Send Message"}

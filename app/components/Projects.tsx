@@ -71,11 +71,11 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className={`py-24 bg-stone-100 transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+      className={`py-24 bg-[#141210] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-4">
-          <span className="text-amber-600 font-mono text-sm">04.</span>
+          <span className="text-green-400 font-mono text-sm">04.</span>
           <h2 className="text-3xl font-bold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>Projects</h2>
           <div className="flex-1 h-px bg-stone-200" />
         </div>
@@ -84,18 +84,18 @@ export default function Projects() {
           {projects.map((project, i) => (
             <div
               key={i}
-              className="group relative flex flex-col p-6 bg-white border border-stone-200 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-xl hover:shadow-stone-200/50"
+              className="group relative flex flex-col p-6 bg-[#1c1917] border border-[#292524] rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-xl hover:shadow-stone-200/50"
             >
               {/* Top row */}
               <div className="flex items-start justify-between mb-5">
-                <FolderOpen size={30} className="text-amber-600 group-hover:text-amber-700 transition-colors" />
+                <FolderOpen size={30} className="text-green-400 group-hover:text-green-300 transition-colors" />
                 <div className="flex gap-3">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-stone-400 hover:text-stone-800 transition-colors"
+                      className="text-gray-600 hover:text-stone-100 transition-colors"
                       aria-label="GitHub repository"
                     >
                       <Github size={17} />
@@ -106,7 +106,7 @@ export default function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-stone-400 hover:text-stone-800 transition-colors"
+                      className="text-gray-600 hover:text-stone-100 transition-colors"
                       aria-label="Live demo"
                     >
                       <ExternalLink size={17} />
@@ -116,10 +116,10 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <h3 className="text-stone-700 font-semibold text-sm mb-2 group-hover:text-amber-600 transition-colors">
+              <h3 className="text-gray-700 font-semibold text-sm mb-2 group-hover:text-green-400 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-stone-500 text-xs leading-relaxed flex-1 mb-4">
+              <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-4">
                 {project.description}
               </p>
 
@@ -142,7 +142,7 @@ export default function Projects() {
             href="https://github.com/Oludiran-Ayoade"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-stone-300 hover:border-amber-500 text-stone-600 hover:text-amber-600 rounded-lg transition-all duration-200 text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-[#44403c] hover:border-green-500 text-gray-400 hover:text-green-400 rounded-lg transition-all duration-200 text-sm"
           >
             <Github size={16} />
             View All Repositories on GitHub

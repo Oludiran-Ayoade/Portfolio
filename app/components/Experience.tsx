@@ -98,7 +98,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className={`py-24 bg-stone-100 transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+      className={`py-24 bg-[#141210] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
@@ -109,12 +109,12 @@ export default function Experience() {
 
         <div className="grid md:grid-cols-[220px_1fr] gap-8">
           {/* Tab list */}
-          <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l-2 border-stone-200 pb-4 md:pb-0 gap-1 shrink-0">
+          <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l-2 border-[#292524] pb-4 md:pb-0 gap-1 shrink-0">
             {experiences.map((ex, i) => (
               <button
                 key={i}
                 onClick={() => setActive(i)}
-                className={`text-left px-4 py-3 text-sm font-medium transition-all duration-200 whitespace-nowrap md:whitespace-normal rounded-r-lg shrink-0 ${ active === i ? "text-amber-600 bg-amber-500/10 border-l-2 border-amber-600 -ml-0.5" : "text-stone-500 hover:text-stone-800 hover:bg-stone-200/40 border-l-2 border-transparent -ml-0.5" }`}
+                className={`text-left px-4 py-3 text-sm font-medium transition-all duration-200 whitespace-nowrap md:whitespace-normal rounded-r-lg shrink-0 ${ active === i ? "text-green-400 bg-green-500/10 border-l-2 border-amber-600 -ml-0.5" : "text-gray-500 hover:text-stone-100 hover:bg-stone-200/40 border-l-2 border-transparent -ml-0.5" }`}
               >
                 <span className="block">{ex.company}</span>
                 {ex.current && (
@@ -131,7 +131,7 @@ export default function Experience() {
                 {exp.role}{" "}
                 <span className="text-amber-600">@ {exp.company}</span>
               </h3>
-              <p className="flex items-center gap-2 text-stone-400 text-sm mt-1.5 font-mono">
+              <p className="flex items-center gap-2 text-gray-600 text-sm mt-1.5 font-mono">
                 <Calendar size={13} />
                 {exp.period}
               </p>
@@ -139,10 +139,10 @@ export default function Experience() {
 
             <ul className="space-y-3">
               {exp.bullets.map((b, i) => (
-                <li key={i} className="flex gap-3 text-stone-600 text-sm leading-relaxed">
+                <li key={i} className="flex gap-3 text-gray-400 text-sm leading-relaxed">
                   <ChevronRight
                     size={15}
-                    className="text-amber-600 mt-0.5 shrink-0"
+                    className="text-green-400 mt-0.5 shrink-0"
                   />
                   {b}
                 </li>
@@ -153,7 +153,7 @@ export default function Experience() {
               {exp.tech.map((t) => (
                 <span
                   key={t}
-                  className="px-3 py-1 bg-amber-500/10 text-amber-600 text-xs font-mono rounded-full border border-amber-500/20"
+                  className="px-3 py-1 bg-green-500/10 text-green-400 text-xs font-mono rounded-full border border-amber-500/20"
                 >
                   {t}
                 </span>

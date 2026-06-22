@@ -41,7 +41,7 @@ export default function Education() {
     <section
       id="education"
       ref={ref}
-      className={`py-24 bg-[#f0ebe3] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+      className={`py-24 bg-[#0c0a09] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
@@ -54,24 +54,24 @@ export default function Education() {
           {education.map(({ degree, institution, location, period, icon: Icon, type, note }) => (
             <div
               key={degree}
-              className="p-6 bg-white border border-stone-200 rounded-xl hover:border-amber-500/30 transition-colors duration-200"
+              className="p-6 bg-[#1c1917] border border-[#292524] rounded-xl hover:border-green-500/30 transition-colors duration-200"
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-amber-500/10 rounded-lg shrink-0">
+                <div className="p-3 bg-green-500/10 rounded-lg shrink-0">
                   <Icon size={22} className="text-amber-600" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-amber-600/60 uppercase tracking-widest">
+                  <span className="text-xs font-mono text-green-400/60 uppercase tracking-widest">
                     {type}
                   </span>
-                  <h3 className="text-stone-900 font-semibold mt-1">{degree}</h3>
-                  <p className="text-stone-500 text-sm mt-1">{institution}</p>
-                  <p className="text-stone-400 text-xs mt-1">
+                  <h3 className="text-white font-semibold mt-1">{degree}</h3>
+                  <p className="text-gray-500 text-sm mt-1">{institution}</p>
+                  <p className="text-gray-600 text-xs mt-1">
                     {location}
                     {period && ` · ${period}`}
                   </p>
                   {note && (
-                    <p className="text-stone-400 text-xs mt-2 italic">{note}</p>
+                    <p className="text-gray-600 text-xs mt-2 italic">{note}</p>
                   )}
                 </div>
               </div>
@@ -79,9 +79,9 @@ export default function Education() {
           ))}
         </div>
 
-        <div className="mt-8 p-4 bg-amber-500/5 border border-amber-500/10 rounded-lg max-w-3xl">
-          <p className="text-stone-500 text-sm">
-            <span className="text-amber-600 font-medium">Career pivot: </span>
+        <div className="mt-8 p-4 bg-green-500/5 border border-green-500/10 rounded-lg max-w-3xl">
+          <p className="text-gray-500 text-sm">
+            <span className="text-green-400 font-medium">Career pivot: </span>
             Transitioning from Civil Engineering to Software Engineering
             demonstrates adaptability, rigorous analytical thinking, and a
             drive for continuous self-improvement.

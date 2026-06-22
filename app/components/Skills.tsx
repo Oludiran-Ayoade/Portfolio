@@ -70,7 +70,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className={`py-24 bg-[#f0ebe3] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
+      className={`py-24 bg-[#0c0a09] transition-all duration-700 ${ visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8" }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-14">
@@ -83,7 +83,7 @@ export default function Skills() {
           {skillCategories.map(({ name, color, skills }) => (
             <div
               key={name}
-              className="p-6 bg-white border border-stone-200 rounded-xl hover:border-stone-300 transition-colors duration-200"
+              className="p-6 bg-[#1c1917] border border-[#292524] rounded-xl hover:border-[#44403c] transition-colors duration-200"
             >
               <h3 className={`text-xs font-mono uppercase tracking-widest mb-4 ${headerColorMap[color]}`}>
                 {name}
