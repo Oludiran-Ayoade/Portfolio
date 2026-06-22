@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Oyo State, Nigeria",
+    value: "Ibadan, Oyo State, Nigeria",
     href: null,
   },
   {

@@ -9,7 +9,7 @@ const projects = [
     description:
       "A platform for tracking Nigerian Naira exchange rates across multiple currencies. Provides real-time rate comparisons and historical trends for users.",
     tech: ["React.js", "JavaScript", "CSS", "API Integration"],
-    github: "https://github.com/Oludiran-Ayoade/nairarate-ng",
+    github: "https://github.com/Oludiran-Ayoade",
     live: "https://nairarate.ng/",
   },
   {
@@ -17,15 +17,15 @@ const projects = [
     description:
       "A visually engaging landing page built for a churros brand, showcasing modern web design and responsive layout techniques.",
     tech: ["HTML", "CSS", "JavaScript", "Netlify"],
-    github: "https://github.com/Oludiran-Ayoade/fancy-churros",
+    github: "https://github.com/Oludiran-Ayoade",
     live: "https://fancy-churros-49b58a.netlify.app/",
   },
   {
     title: "OyoBooking NG",
     description:
-      "A booking platform designed for Oyo State, enabling seamless reservation services with an intuitive user interface.",
+      "A booking platform designed for Ibadan, Oyo State, enabling seamless reservation services with an intuitive user interface.",
     tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/Oludiran-Ayoade/oyobooking-ng",
+    github: "https://github.com/Oludiran-Ayoade",
     live: "https://oyobooking-ng.netlify.app",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     description:
       "A modern landing page for a boba tea brand featuring smooth animations and responsive design for all devices.",
     tech: ["HTML", "Sass", "JavaScript", "Responsive Design"],
-    github: "https://github.com/Oludiran-Ayoade/steady-boba",
+    github: "https://github.com/Oludiran-Ayoade",
     live: "https://steady-boba-1c9363.netlify.app/",
   },
   {
@@ -41,7 +41,7 @@ const projects = [
     description:
       "A professional institutional website for a university accounting department with course information, faculty profiles, and resources.",
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    github: "https://github.com/Oludiran-Ayoade/dept-of-accounting",
+    github: "https://github.com/Oludiran-Ayoade",
     live: "https://deptofaccounting.netlify.app/",
   },
   {

@@ -16,7 +16,7 @@ const education = [
   {
     degree: "Secondary School Certificate",
     institution: "Winners International College Oyo",
-    location: "Oyo State, Nigeria",
+    location: "Ibadan, Oyo State, Nigeria",
     period: "",
     icon: School,
     type: "Secondary School",

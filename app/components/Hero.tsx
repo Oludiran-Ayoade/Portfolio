@@ -28,17 +28,17 @@ export default function Hero() {
             </p>
 
             <div className="space-y-3">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#f5f0e8] leading-[1.1] tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#f5f0e8] leading-[1.1] tracking-tight" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 I&apos;m <span className="text-[#d4af37]">Oludiran-Ayoade</span>
               </h1>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#e8e0d4] leading-[1.1] tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#e8e0d4] leading-[1.1] tracking-tight" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 Olutimileyin
               </h1>
             </div>
 
             <p className="text-[#c4b8a8] text-lg leading-relaxed max-w-lg" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Crafting scalable APIs and intuitive interfaces. Based in{" "}
-              <span className="font-semibold text-[#f5f0e8]">Oyo State, Nigeria</span>.
+              <span className="font-semibold text-[#f5f0e8]">Ibadan, Oyo State, Nigeria</span>.
               Passionate about clean architecture, CQRS patterns, and turning
               complex problems into elegant code.
             </p>
@@ -62,7 +62,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-x-6 gap-y-3 pt-4 text-base text-[#a89b8c]">
               <span className="flex items-center gap-2">
                 <MapPin size={16} className="text-[#d4af37]" />
-                Oyo State, Nigeria
+                Ibadan, Oyo State, Nigeria
               </span>
               <a
                 href="mailto:ooludiranayoade@gmail.com"

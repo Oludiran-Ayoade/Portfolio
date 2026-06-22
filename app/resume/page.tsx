@@ -12,7 +12,7 @@ export default function ResumePage() {
         <div className="text-center space-y-3 border-b border-[#c9a84c]/30 pb-8">
           <h1
             className="text-4xl md:text-5xl font-extrabold text-[#f5f0e8]"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "'Poppins', sans-serif" }}
           >
             Oludiran-Ayoade <span className="text-[#d4af37]">Olutimileyin Emmanuel</span>
           </h1>
@@ -20,7 +20,7 @@ export default function ResumePage() {
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-[#c4b8a8]">
             <span className="flex items-center gap-1.5">
               <MapPin size={14} className="text-[#d4af37]" />
-              Oyo State, Nigeria
+              Ibadan, Oyo State, Nigeria
             </span>
             <a href="tel:+2347060601254" className="flex items-center gap-1.5 hover:text-[#d4af37] transition-colors">
               <Phone size={14} className="text-[#d4af37]" />
@@ -140,7 +140,7 @@ export default function ResumePage() {
               <span className="text-[#a89b8c]">2015 – 2020</span>
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
-              <p><span className="text-[#f5f0e8] font-medium">Secondary School</span> — Winners International College Oyo, Oyo State, Nigeria</p>
+              <p><span className="text-[#f5f0e8] font-medium">Secondary School</span> — Winners International College Oyo, Ibadan, Oyo State, Nigeria</p>
             </div>
           </div>
         </section>
