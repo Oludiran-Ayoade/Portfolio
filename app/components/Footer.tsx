@@ -4,11 +4,11 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-8 bg-[#1a3a1a]">
+    <footer className="py-8 bg-[#0f0a07]">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <a
           href="#home"
-          className="flex items-center gap-2 text-white font-mono font-bold hover:text-amber-400 transition-colors"
+          className="flex items-center gap-2 text-white font-mono font-bold hover:text-[#d4af37] transition-colors"
         >
           <Code2 size={18} />
           <span className="text-sm">OAE</span>
@@ -24,14 +24,14 @@ export default function Footer() {
             href="https://github.com/Oludiran-Ayoade"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/60 hover:text-amber-400 transition-colors"
+            className="text-white/60 hover:text-[#d4af37] transition-colors"
             aria-label="GitHub"
           >
             <Github size={17} />
           </a>
           <a
             href="mailto:ooludiranayoade@gmail.com"
-            className="text-white/60 hover:text-amber-400 transition-colors"
+            className="text-white/60 hover:text-[#d4af37] transition-colors"
             aria-label="Email"
           >
             <Mail size={17} />
